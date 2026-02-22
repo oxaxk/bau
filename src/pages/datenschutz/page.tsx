@@ -25,9 +25,9 @@ export default function Datenschutz() {
             <p className="mb-4">
               <strong>Kiral Bau</strong><br />
               Berlin, Deutschland<br />
-              Telefon: +49 176 30140780<br />
+Telefon: +49 176 30140780<br />
               E-Mail: kiralbau@hotmail.com<br />
-              Website: https://kiral-bau.de
+              Website: https://kiralbau.de
             </p>
 
             <h2 className="text-2xl font-semibold mb-4 mt-8">2. Allgemeine Hinweise</h2>
