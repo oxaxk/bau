@@ -26,7 +26,7 @@ export default function Impressum() {
                 13347 Berlin<br />
                 Telefon:{' '}
                 <a href="tel:+4917630140780" className="text-[#020617] hover:underline">
-+49 176 30140780
+                  +49 176 30140780
                 </a>
                 <br />
                 E-Mail:{' '}
