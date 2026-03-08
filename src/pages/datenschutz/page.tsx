@@ -27,7 +27,7 @@ export default function Datenschutz() {
               Berlin, Deutschland<br />
 Telefon: +49 176 30140780<br />
               E-Mail: kiralbau@hotmail.com<br />
-              Website: https://kiralbau.de
+              Website: https://kiral-bau.de
             </p>
 
             <h2 className="text-2xl font-semibold mb-4 mt-8">2. Allgemeine Hinweise</h2>
@@ -39,19 +39,24 @@ Telefon: +49 176 30140780<br />
 
             <h2 className="text-2xl font-semibold mb-4 mt-8">3. Hosting und Server-Logfiles</h2>
             <p className="mb-4">
-              Diese Website wird bei einem externen Hosting-Dienstleister (Vercel Inc., USA) gehostet.
+              Diese Website wird über den Hosting-Dienstleister Vercel Inc. betrieben. Der Quellcode der Website wird über die Plattform GitHub verwaltet und von dort automatisiert auf die Server von Vercel bereitgestellt.
             </p>
             <p className="mb-4">
-              Mit dem Hosting-Anbieter wurde ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen. Die Datenübertragung in die USA erfolgt auf Grundlage geeigneter Garantien gemäß Art. 46 DSGVO.
-            </p>
-            <p className="mb-4">
-              Beim Aufruf der Website werden technisch 
+              Beim Aufruf dieser Website werden durch die Server des Hosting-Anbieters technisch 
               notwendige Daten (z. B. IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, verwendeter Browser) 
               automatisch in sogenannten Server-Logfiles erfasst. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, 
               da wir ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung der Website haben.
             </p>
 
-            <h2 className="text-2xl font-semibold mb-4 mt-8">4. Kontaktaufnahme</h2>
+            <h2 className="text-2xl font-semibold mb-4 mt-8">4. Cookies und Tracking</h2>
+            <p className="mb-4">
+              Auf dieser Website werden keine Cookies zu Analyse-, Marketing- oder Trackingzwecken eingesetzt.
+              Es werden ausschließlich technisch notwendige Server-Logfiles durch den Hostinganbieter
+              verarbeitet (siehe Abschnitt Hosting). Eine Einwilligung über ein Cookie-Banner ist daher
+              nicht erforderlich.
+            </p>
+
+            <h2 className="text-2xl font-semibold mb-4 mt-8">5. Kontaktaufnahme</h2>
             <p className="mb-4">
               Wenn Sie uns per Kontaktformular oder per E-Mail kontaktieren, werden Ihre Angaben aus dem Formular bzw. 
               der E-Mail inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall 
@@ -64,14 +69,14 @@ Telefon: +49 176 30140780<br />
               von Anfragen).
             </p>
 
-            <h2 className="text-2xl font-semibold mb-4 mt-8">5. Speicherdauer</h2>
+            <h2 className="text-2xl font-semibold mb-4 mt-8">6. Speicherdauer</h2>
             <p className="mb-4">
               Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wird, verbleiben Ihre 
               personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt (z. B. nach abgeschlossener
               Bearbeitung Ihrer Anfrage). Gesetzliche Aufbewahrungsfristen bleiben unberührt.
             </p>
 
-            <h2 className="text-2xl font-semibold mb-4 mt-8">6. Ihre Rechte</h2>
+            <h2 className="text-2xl font-semibold mb-4 mt-8">7. Ihre Rechte</h2>
             <p className="mb-4">
               Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft 
               über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ggf. ein Recht auf 
