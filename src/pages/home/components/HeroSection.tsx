@@ -49,18 +49,18 @@ export default function HeroSection() {
           </div>
 
           <div className="order-1 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-3 py-1 text-[0.65rem] sm:text-[0.7rem] tracking-[0.12em] sm:tracking-[0.18em] uppercase text-slate-800 mb-4 shadow-sm">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-md border border-amber-300/60 bg-white/80 px-3 py-1.5 text-[0.68rem] sm:text-xs font-semibold tracking-[0.08em] uppercase text-slate-800 mb-4 shadow-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-              Eigentümer · Verwalter · Bauträger
+              Bau · Sanierung · Modernisierung
             </div>
 
-            <h1 id="hero-heading" className="max-w-[18rem] sm:max-w-2xl text-[2rem] sm:text-5xl lg:text-[3.45rem] font-semibold leading-[1.06] sm:leading-[1.02] mb-5 text-slate-950">
-              Fassade sanieren in Berlin ohne Verzögerung
+            <h1 id="hero-heading" className="max-w-[19rem] sm:max-w-2xl text-[2rem] sm:text-5xl lg:text-[3.45rem] font-semibold leading-[1.06] sm:leading-[1.02] mb-5 text-slate-950">
+              Bauprojekte in Berlin sauber umgesetzt
             </h1>
 
             <p className="text-base sm:text-lg leading-relaxed text-slate-700 max-w-[20rem] sm:max-w-xl mx-auto md:mx-0">
-              Klare Abläufe, feste Ansprechpartner und dokumentierte Umsetzung von WDVS, Putz und Sanierung -
-              von der ersten Baustellenbewertung bis zur Abnahme.
+              Kiral Bau übernimmt Sanierung, WDVS, Putz, Abbruch und Ausbau mit klaren Abläufen,
+              festen Ansprechpartnern und dokumentierter Umsetzung.
             </p>
 
             <div className="mt-6 flex max-w-[20rem] flex-wrap justify-center gap-2 md:max-w-none md:justify-start">
@@ -76,10 +76,10 @@ export default function HeroSection() {
                 <Button
                   href="#contact"
                   size="lg"
-                  className="w-full max-w-[17rem] text-[0.72rem] sm:text-sm md:text-base px-4 sm:px-7 py-3 rounded-lg !bg-amber-500 !text-slate-950 !border-amber-500 shadow-[0_14px_30px_rgba(217,119,6,0.28)] tracking-[0.08em] sm:tracking-[0.12em] uppercase hover:!bg-amber-400 hover:shadow-[0_18px_42px_rgba(217,119,6,0.36)] !whitespace-normal text-center leading-tight"
+                  className="w-full max-w-[13rem] text-sm md:text-base px-5 sm:px-7 py-3 rounded-lg !bg-amber-500 !text-slate-950 !border-amber-500 shadow-[0_14px_30px_rgba(217,119,6,0.28)] tracking-[0.08em] uppercase hover:!bg-amber-400 hover:shadow-[0_18px_42px_rgba(217,119,6,0.36)] !whitespace-nowrap text-center leading-tight"
                 >
-                  <i className="ri-mail-line mr-3 text-xl sm:text-2xl" aria-hidden="true" />
-                  Baustellenbewertung sichern
+                  <i className="ri-mail-line mr-2 text-xl" aria-hidden="true" />
+                  Anfragen
                 </Button>
               </div>
 
@@ -87,10 +87,10 @@ export default function HeroSection() {
                 <Button
                   href="#contact"
                   size="lg"
-                  className="w-full max-w-[17rem] text-[0.68rem] sm:text-sm md:text-base px-4 sm:px-7 py-3 rounded-lg !bg-white !text-[#0f172a] !border-slate-900/10 shadow-[0_10px_24px_rgba(15,23,42,0.14)] tracking-[0.08em] sm:tracking-[0.12em] uppercase hover:!bg-slate-100 !whitespace-normal text-center leading-tight"
+                  className="w-full max-w-[13rem] text-sm md:text-base px-5 sm:px-7 py-3 rounded-lg !bg-white !text-[#0f172a] !border-slate-900/10 shadow-[0_10px_24px_rgba(15,23,42,0.14)] tracking-[0.08em] uppercase hover:!bg-slate-100 !whitespace-nowrap text-center leading-tight"
                 >
                   <i className="ri-phone-line mr-2 text-lg" aria-hidden="true" />
-                  Projekt anfragen (24h)
+                  Rückruf
                 </Button>
               </div>
             </div>

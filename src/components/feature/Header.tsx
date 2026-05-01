@@ -56,7 +56,7 @@ export default function Header() {
                 onClick={handleContactClick}
                 className="!rounded-full !border-amber-500 !bg-amber-500 !px-6 !py-3 !text-slate-950 shadow-[0_14px_32px_rgba(217,119,6,0.34)] hover:!bg-amber-400 hover:!border-amber-400 hover:shadow-[0_18px_42px_rgba(217,119,6,0.44)]"
               >
-                Baustellenbewertung sichern
+                Anfrage starten
               </Button>
             </div>
           </div>
