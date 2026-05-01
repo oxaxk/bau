@@ -237,7 +237,7 @@ export default function ContactSection() {
                   </p>
                   <button
                     type="submit"
-                    className="inline-flex justify-center items-center px-8 py-3 rounded-full font-semibold text-[0.75rem] sm:text-sm md:text-base tracking-[0.22em] uppercase bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-[0_16px_40px_rgba(8,47,73,0.7)] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="inline-flex justify-center items-center px-8 py-3 rounded-lg font-semibold text-[0.75rem] sm:text-sm md:text-base tracking-[0.16em] uppercase bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-[0_14px_34px_rgba(217,119,6,0.32)] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Wird gesendet…' : 'Anfrage senden'}

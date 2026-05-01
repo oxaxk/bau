@@ -1,22 +1,16 @@
+import BrandLogo from '../base/BrandLogo';
+
 export default function Footer() {
   return (
-    <footer className="py-14 bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950 text-white">
+    <footer className="py-14 bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-          {/* Logo & Description */}
           <div className="md:col-span-2 flex flex-col items-center md:items-start">
-            <a href="/" className="mb-4 flex items-center gap-2 justify-center md:justify-start">
-              <img
-                src="/images/logo.png"
-                alt="Kiral Bau Logo"
-                className="h-11 md:h-14 w-auto drop-shadow-[0_8px_24px_rgba(15,23,42,0.9)]"
-              />
-              <span className="text-2xl md:text-[2rem] font-light tracking-[0.24em] text-white/90 uppercase">
-                Kiral Bau
-              </span>
+            <a href="/" className="mb-5 inline-flex justify-center md:justify-start">
+              <BrandLogo />
             </a>
             <p className="text-white/70 mb-6 max-w-md text-sm md:text-base">
-              Berliner Bauunternehmen für Sanierung, WDVS, Putzarbeiten, Abbruch und Fassadengestaltung – mit Fokus auf Qualität und Nachhaltigkeit.
+              Berliner Bauunternehmen für Sanierung, WDVS, Putzarbeiten, Abbruch und Fassadengestaltung mit klarer Baustellendokumentation.
             </p>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a 

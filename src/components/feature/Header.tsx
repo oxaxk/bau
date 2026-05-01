@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../base/Button';
+import BrandLogo from '../base/BrandLogo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,21 +25,8 @@ export default function Header() {
     >
       <div className="relative bg-[#020617]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.75)]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between gap-6">
-          {/* LEFT: LOGO + SUBLINE */}
           <a href="/" className="flex items-center gap-3 group cursor-pointer">
-            <div className="h-9 w-9 md:h-10 md:w-10 rounded-xl border border-white/20 bg-white/5 flex items-center justify-center shadow-[0_0_0_1px_rgba(255,255,255,0.04)] group-hover:border-[#38bdf8]/70 group-hover:shadow-[0_0_18px_rgba(56,189,248,0.35)] transition-all">
-              <span className="text-xs font-semibold tracking-[0.14em] text-white">
-                KB
-              </span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-white">
-                Kiral Bau
-              </span>
-              <span className="text-[0.58rem] sm:text-[0.65rem] md:text-[0.7rem] tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#e5e7eb]/70">
-                Sanierung · WDVS · Fassaden
-              </span>
-            </div>
+            <BrandLogo />
           </a>
 
           {/* DESKTOP NAV + CTA */}

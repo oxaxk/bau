@@ -30,18 +30,18 @@ export default function HeroSection() {
                     fetchPriority="high"
                   />
                 </picture>
-                <div className="absolute inset-x-5 bottom-5 grid grid-cols-3 overflow-hidden rounded-2xl bg-slate-950/88 text-white shadow-[0_18px_38px_rgba(15,23,42,0.34)] backdrop-blur">
-                  <div className="border-r border-white/12 px-3 py-3">
-                    <p className="text-lg font-semibold leading-none">50+</p>
-                    <p className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-white/70">Projekte</p>
+                <div className="absolute inset-x-4 bottom-4 grid grid-cols-3 overflow-hidden rounded-xl bg-slate-950/92 text-white shadow-[0_16px_34px_rgba(15,23,42,0.3)] backdrop-blur">
+                  <div className="border-r border-white/10 px-3 py-3">
+                    <p className="text-base font-black leading-none text-amber-300">50+</p>
+                    <p className="mt-1 text-[0.56rem] uppercase tracking-[0.08em] text-white/75">Projekte</p>
                   </div>
-                  <div className="border-r border-white/12 px-3 py-3">
-                    <p className="text-lg font-semibold leading-none">24h</p>
-                    <p className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-white/70">Antwort</p>
+                  <div className="border-r border-white/10 px-3 py-3">
+                    <p className="text-base font-black leading-none text-amber-300">24h</p>
+                    <p className="mt-1 text-[0.56rem] uppercase tracking-[0.08em] text-white/75">Antwort</p>
                   </div>
                   <div className="px-3 py-3">
-                    <p className="text-lg font-semibold leading-none">WDVS</p>
-                    <p className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-white/70">Standard</p>
+                    <p className="text-base font-black leading-none text-amber-300">WDVS</p>
+                    <p className="mt-1 text-[0.56rem] uppercase tracking-[0.08em] text-white/75">Standard</p>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function HeroSection() {
                 <Button
                   href="#contact"
                   size="lg"
-                  className="w-full max-w-[18rem] text-[0.72rem] sm:text-sm md:text-base px-4 sm:px-8 py-3.5 rounded-full !bg-amber-500 !text-slate-950 !border-amber-500 shadow-[0_18px_42px_rgba(217,119,6,0.35)] tracking-[0.08em] sm:tracking-[0.16em] uppercase hover:!bg-amber-400 hover:shadow-[0_22px_52px_rgba(217,119,6,0.45)] !whitespace-normal text-center leading-tight"
+                  className="w-full max-w-[17rem] text-[0.72rem] sm:text-sm md:text-base px-4 sm:px-7 py-3 rounded-lg !bg-amber-500 !text-slate-950 !border-amber-500 shadow-[0_14px_30px_rgba(217,119,6,0.28)] tracking-[0.08em] sm:tracking-[0.12em] uppercase hover:!bg-amber-400 hover:shadow-[0_18px_42px_rgba(217,119,6,0.36)] !whitespace-normal text-center leading-tight"
                 >
                   <i className="ri-mail-line mr-3 text-xl sm:text-2xl" aria-hidden="true" />
                   Baustellenbewertung sichern
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 <Button
                   href="#contact"
                   size="lg"
-                  className="w-full max-w-[18rem] text-[0.68rem] sm:text-sm md:text-base px-4 sm:px-7 py-3 rounded-full !bg-white !text-[#0f172a] !border-slate-900/10 shadow-[0_12px_30px_rgba(15,23,42,0.16)] tracking-[0.08em] sm:tracking-[0.16em] uppercase hover:!bg-slate-100 !whitespace-normal text-center leading-tight"
+                  className="w-full max-w-[17rem] text-[0.68rem] sm:text-sm md:text-base px-4 sm:px-7 py-3 rounded-lg !bg-white !text-[#0f172a] !border-slate-900/10 shadow-[0_10px_24px_rgba(15,23,42,0.14)] tracking-[0.08em] sm:tracking-[0.12em] uppercase hover:!bg-slate-100 !whitespace-normal text-center leading-tight"
                 >
                   <i className="ri-phone-line mr-2 text-lg" aria-hidden="true" />
                   Projekt anfragen (24h)
