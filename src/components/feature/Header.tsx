@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Button from '../base/Button';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
-  const lastScrollYRef = useRef(0);
 
   const handleContactClick = () => {
     if (typeof window === 'undefined') return;
@@ -20,39 +18,9 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window === 'undefined') return;
-
-      const currentY = window.scrollY || window.pageYOffset;
-      const lastY = lastScrollYRef.current;
-
-      const THRESHOLD = 16;
-
-      if (Math.abs(currentY - lastY) < THRESHOLD) {
-        return;
-      }
-
-      if (currentY > lastY && currentY > 80) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
-
-      lastScrollYRef.current = currentY;
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transform transition-transform duration-300 ${
-        isHidden ? '-translate-y-full' : 'translate-y-0'
-      }`}
+      className="sticky top-0 left-0 right-0 z-50"
     >
       <div className="relative bg-[#020617]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.75)]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between gap-6">
@@ -67,7 +35,7 @@ export default function Header() {
               <span className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-white">
                 Kiral Bau
               </span>
-              <span className="text-[0.65rem] md:text-[0.7rem] tracking-[0.22em] uppercase text-[#e5e7eb]/70">
+              <span className="text-[0.58rem] sm:text-[0.65rem] md:text-[0.7rem] tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#e5e7eb]/70">
                 Sanierung · WDVS · Fassaden
               </span>
             </div>
@@ -98,9 +66,9 @@ export default function Header() {
               <Button
                 variant="secondary"
                 onClick={handleContactClick}
-                className="!rounded-full !border-white/30 !bg-white/5 !text-white hover:!bg-white/10 hover:!border-[#38bdf8]/60 hover:shadow-[0_0_24px_rgba(56,189,248,0.45)]"
+                className="!rounded-full !border-amber-500 !bg-amber-500 !px-6 !py-3 !text-slate-950 shadow-[0_14px_32px_rgba(217,119,6,0.34)] hover:!bg-amber-400 hover:!border-amber-400 hover:shadow-[0_18px_42px_rgba(217,119,6,0.44)]"
               >
-                Kostenlose Anfrage
+                Baustellenbewertung sichern
               </Button>
             </div>
           </div>
@@ -111,7 +79,7 @@ export default function Header() {
               type="button"
               onClick={handleContactClick}
               aria-label="Zum Kontaktformular"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/5 border border-white/30 hover:bg-white/10 hover:border-[#38bdf8]/60 transition-colors"
+              className="hidden h-9 w-9 items-center justify-center rounded-full bg-white/5 border border-white/30 hover:bg-white/10 hover:border-[#38bdf8]/60 transition-colors sm:inline-flex"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,9 +153,9 @@ export default function Header() {
                 handleContactClick();
                 setIsMenuOpen(false);
               }}
-              className="!rounded-full !border-white/30 !bg-white/5 !text-white hover:!bg-white/10 hover:!border-[#38bdf8]/60 hover:shadow-[0_0_24px_rgba(56,189,248,0.45)] text-xs tracking-[0.22em] uppercase"
+              className="!rounded-full !border-amber-500 !bg-amber-500 !text-slate-950 hover:!bg-amber-400 hover:!border-amber-400 text-xs tracking-[0.16em] uppercase"
             >
-              Projekt anfragen
+              Bewertung sichern
             </Button>
           </div>
         </div>

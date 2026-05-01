@@ -3,14 +3,17 @@ import { useEffect, useState } from 'react';
 const socialImages = [
   {
     src: '/images/projects/11.png',
+    avif: '/images/optimized/projects/11-640.avif 640w, /images/optimized/projects/11-960.avif 960w',
     alt: 'Kiral Bau Projekt 1 – Fassadensanierung und WDVS'
   },
   {
     src: '/images/projects/12.png',
+    avif: '/images/optimized/projects/12-640.avif 640w, /images/optimized/projects/12-960.avif 960w',
     alt: 'Kiral Bau Projekt 2 – Putzarbeiten und Fassadengestaltung'
   },
   {
     src: '/images/projects/13.png',
+    avif: '/images/optimized/projects/13-640.avif 640w, /images/optimized/projects/13-960.avif 960w',
     alt: 'Kiral Bau Projekt 3 – Sanierung einer Wohnimmobilie'
   }
 ];
@@ -57,13 +60,22 @@ const TeamSection = () => {
             onFocus={() => setActiveIndex(activeIndex)}
           >
             {socialImages.map((image, index) => (
-              <img
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
-              />
+              <picture key={image.src}>
+                <source
+                  type="image/avif"
+                  srcSet={image.avif}
+                  sizes="(min-width: 1024px) 58vw, 92vw"
+                />
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width={960}
+                  height={1200}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                />
+              </picture>
             ))}
             <div className="absolute inset-x-6 bottom-6 rounded-2xl bg-slate-900/80 px-5 py-3 backdrop-blur">
               <p className="text-[0.7rem] uppercase tracking-[0.18em] text-slate-300">
@@ -92,7 +104,8 @@ const TeamSection = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    loading={index === 0 ? 'eager' : 'lazy'}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform"
                   />
                 </div>

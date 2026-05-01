@@ -183,10 +183,11 @@ export default function ContactSection() {
 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <label className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
+                    <label htmlFor="service" className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
                       Leistungsbereich (optional)
                     </label>
                     <select
+                      id="service"
                       className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       style={{ backgroundPosition: 'right 1rem center' }}
                       name="service"
@@ -203,11 +204,12 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
+                    <label htmlFor="date" className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
                       Wunschtermin (optional)
                     </label>
                     <input
                       type="date"
+                      id="date"
                       className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       name="date"
                     />
@@ -215,12 +217,13 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
+                  <label htmlFor="message" className="block mb-2 text-xs font-medium tracking-[0.18em] uppercase text-slate-200">
                     Nachricht*
                   </label>
                   <textarea
                     rows={4}
                     minLength={10}
+                    id="message"
                     className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                     placeholder="z. B. Art des Projekts, Gebäudeart, Flächen, geplanter Zeitraum, besondere Anforderungen"
                     name="message"

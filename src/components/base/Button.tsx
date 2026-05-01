@@ -6,6 +6,8 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({ 
@@ -14,7 +16,9 @@ export default function Button({
   size = 'md', 
   className = '',
   onClick,
-  href
+  href,
+  target,
+  rel
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 cursor-pointer whitespace-nowrap rounded-full focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-slate-950';
   
@@ -37,7 +41,7 @@ export default function Button({
   
   if (href) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={classes} target={target} rel={rel}>
         {children}
       </a>
     );

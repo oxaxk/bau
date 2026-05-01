@@ -17,42 +17,48 @@ export default function ServicesSection() {
       title: 'Sanierung & Modernisierung',
       description:
         'Komplette Sanierung von Wohn- und Gewerbeimmobilien – von der Bestandsaufnahme bis zur fertigen Oberfläche, inkl. Koordination der Gewerke.',
-      image: '/images/services/5.png'
+      image: '/images/services/5.png',
+      avif: '/images/optimized/services/5-520.avif 520w, /images/optimized/services/5-760.avif 760w'
     },
     {
       icon: 'ri-brush-line',
       title: 'Putz- & Fassadenarbeiten',
       description:
         'Innen- und Außenputz, Glatt- und Strukturputze sowie hochwertige Fassadenaufbauten – für langlebige Oberflächen und eine ruhige Optik.',
-      image: '/images/services/6.png'
+      image: '/images/services/6.png',
+      avif: '/images/optimized/services/6-520.avif 520w, /images/optimized/services/6-760.avif 760w'
     },
     {
       icon: 'ri-temp-hot-line',
       title: 'WDVS & Dämmung',
       description:
         'Planung und Ausführung von Wärmedämmverbundsystemen zur Steigerung der Energieeffizienz und nachhaltigen Wertsteigerung von Gebäuden.',
-      image: '/images/services/7.png'
+      image: '/images/services/7.png',
+      avif: '/images/optimized/services/7-520.avif 520w, /images/optimized/services/7-760.avif 760w'
     },
     {
       icon: 'ri-delete-bin-6-line',
       title: 'Abbruch & Entkernung',
       description:
         'Effiziente und umweltbewusste Abbruch- und Entkernungsarbeiten – staubarm, sicher und sauber dokumentiert als Grundlage für neue Bauabschnitte.',
-      image: '/images/services/8.png'
+      image: '/images/services/8.png',
+      avif: '/images/optimized/services/8-520.avif 520w, /images/optimized/services/8-760.avif 760w'
     },
     {
       icon: 'ri-building-3-line',
       title: 'Klinkerriemchen & Fassade',
       description:
         'Stilvolle Fassadengestaltung mit Klinkerriemchen und weiteren Systemen – für zeitlose Eleganz und eine klare architektonische Aussage.',
-      image: '/images/services/9.png'
+      image: '/images/services/9.png',
+      avif: '/images/optimized/services/9-520.avif 520w, /images/optimized/services/9-760.avif 760w'
     },
     {
       icon: 'ri-tools-line',
       title: 'Innenausbau & Begleitgewerke',
       description:
         'Innenausbauleistungen wie Trockenbau, Spachtelarbeiten und Detailausbildungen, die Ihre Fassade- und Putzprojekte sinnvoll ergänzen.',
-      image: '/images/services/10.png'
+      image: '/images/services/10.png',
+      avif: '/images/optimized/services/10-520.avif 520w, /images/optimized/services/10-760.avif 760w'
     }
   ];
 
@@ -253,14 +259,23 @@ export default function ServicesSection() {
                 <div key={svc.title} className="shrink-0 w-[85%] md:w-[45%] lg:w-[38%] snap-center">
                   <div className="bg-white/95 rounded-3xl overflow-hidden shadow-[0_18px_45px_rgba(15,23,42,0.18)] border border-slate-200/80 transition-all duration-300 h-[480px] md:h-[460px] lg:h-[480px] flex flex-col hover:shadow-[0_22px_60px_rgba(15,23,42,0.24)] hover:-translate-y-1">
                     <div className="relative h-[55%] overflow-hidden">
-                      <img
-                        src={svc.image}
-                        alt={svc.title}
-                        className="w-full h-full object-cover object-center scale-[1.03] transition-transform duration-500 hover:scale-105"
-                        draggable={false}
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <picture className="block h-full w-full">
+                        <source
+                          type="image/avif"
+                          srcSet={svc.avif}
+                          sizes="(min-width: 1024px) 38vw, (min-width: 768px) 45vw, 85vw"
+                        />
+                        <img
+                          src={svc.image}
+                          alt={svc.title}
+                          className="w-full h-full object-cover object-center scale-[1.03] transition-transform duration-500 hover:scale-105"
+                          draggable={false}
+                          loading="lazy"
+                          decoding="async"
+                          width={760}
+                          height={638}
+                        />
+                      </picture>
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent" />
                       <div className="absolute top-4 left-4 flex items-center gap-2">
                         <div className="w-10 h-10 rounded-2xl bg-white/90 shadow-md flex items-center justify-center">
@@ -288,6 +303,7 @@ export default function ServicesSection() {
             <button
               onClick={prevSlide}
               disabled={isTransitioning}
+              aria-label="Vorherige Leistung anzeigen"
               className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 hover:border-[#1d4ed8] transition-all duration-200 cursor-pointer disabled:opacity-40 shadow-sm"
             >
               <i className="ri-arrow-left-s-line text-lg text-[#0f172a]" aria-hidden="true"></i>
@@ -299,6 +315,8 @@ export default function ServicesSection() {
                   key={svc.title}
                   onClick={() => goToSlide(index)}
                   disabled={isTransitioning}
+                  aria-label={`${svc.title} anzeigen`}
+                  aria-current={currentIndex === index ? 'true' : undefined}
                   className={`h-2.5 w-2.5 rounded-full transition-all duration-300 cursor-pointer disabled:opacity-50 ${
                     currentIndex === index
                       ? 'bg-[#1d4ed8] shadow-[0_0_0_4px_rgba(37,99,235,0.35)]'
@@ -311,6 +329,7 @@ export default function ServicesSection() {
             <button
               onClick={nextSlide}
               disabled={isTransitioning}
+              aria-label="Nächste Leistung anzeigen"
               className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 hover:border-[#1d4ed8] transition-all duration-200 cursor-pointer disabled:opacity-40 shadow-sm"
             >
               <i className="ri-arrow-right-s-line text-lg text-[#0f172a]" aria-hidden="true"></i>
