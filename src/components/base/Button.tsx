@@ -20,7 +20,7 @@ export default function Button({
   target,
   rel
 }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 cursor-pointer whitespace-nowrap rounded-full focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-slate-950';
+  const baseClasses = 'inline-flex min-w-0 max-w-full items-center justify-center rounded-full font-medium tracking-wide transition-all duration-300 cursor-pointer whitespace-normal text-center leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-slate-950';
   
   const variants = {
     primary:
@@ -41,7 +41,7 @@ export default function Button({
   
   if (href) {
     return (
-      <a href={href} className={classes} target={target} rel={rel}>
+      <a href={href} className={classes} target={target} rel={rel} onClick={onClick}>
         {children}
       </a>
     );

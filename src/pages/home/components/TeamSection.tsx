@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { kiralSite } from '../../../lib/kiral-content';
 
 const socialImages = [
   {
@@ -122,7 +123,7 @@ const TeamSection = () => {
 
             <div className="pt-4">
               <a
-                href="mailto:kiralbau@outlook.com"
+                href={`mailto:${kiralSite.email}`}
                 className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.22em] uppercase bg-slate-900 text-white shadow-[0_16px_40px_rgba(15,23,42,0.75)] hover:bg-slate-950 hover:shadow-[0_20px_50px_rgba(15,23,42,0.9)] transition-all duration-200"
               >
                 <svg

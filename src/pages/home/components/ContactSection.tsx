@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { kiralSite } from '../../../lib/kiral-content';
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -122,14 +123,14 @@ export default function ContactSection() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="tel:+4917630140780"
+                    href={`tel:${kiralSite.phone.replace(/\s+/g, '')}`}
                     className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[0.7rem] sm:text-xs md:text-sm font-semibold tracking-[0.16em] uppercase bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-[0_16px_40px_rgba(8,47,73,0.7)] transition-all duration-200"
                   >
                     <i className="ri-phone-line text-base" aria-hidden="true" />
                     Anrufen
                   </a>
                   <a
-                    href="mailto:kiralbau@outlook.com"
+                    href={`mailto:${kiralSite.email}`}
                     className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[0.7rem] sm:text-xs md:text-sm font-semibold tracking-[0.16em] uppercase border border-sky-500/70 bg-transparent text-sky-100 hover:bg-sky-500/10 transition-all duration-200"
                   >
                     <i className="ri-mail-line text-base" aria-hidden="true" />
@@ -161,7 +162,7 @@ export default function ContactSection() {
                       id="name"
                       autoComplete="name"
                       required
-                      className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                      className="w-full rounded-2xl border border-slate-600 bg-slate-950/60 px-4 py-3 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       name="name"
                     />
                   </div>
@@ -175,7 +176,7 @@ export default function ContactSection() {
                       id="email"
                       autoComplete="email"
                       required
-                      className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                      className="w-full rounded-2xl border border-slate-600 bg-slate-950/60 px-4 py-3 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       name="email"
                     />
                   </div>
@@ -188,7 +189,7 @@ export default function ContactSection() {
                     </label>
                     <select
                       id="service"
-                      className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                      className="w-full rounded-2xl border border-slate-600 bg-slate-950/60 px-4 py-3 text-slate-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       style={{ backgroundPosition: 'right 1rem center' }}
                       name="service"
                     >
@@ -210,7 +211,7 @@ export default function ContactSection() {
                     <input
                       type="date"
                       id="date"
-                      className="w-full px-4 py-3 rounded-2xl border border-slate-600 bg-slate-950/60 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                      className="w-full rounded-2xl border border-slate-600 bg-slate-950/60 px-4 py-3 text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       name="date"
                     />
                   </div>

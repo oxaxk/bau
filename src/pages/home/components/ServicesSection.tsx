@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
 import Button from '../../../components/base/Button';
+import { kiralSite } from '../../../lib/kiral-content';
 
 export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -347,7 +348,7 @@ export default function ServicesSection() {
             Angebot anfragen
           </Button>
           <Button
-            href="tel:+4917630140780"
+            href={`tel:${kiralSite.phone.replace(/\s+/g, '')}`}
             size="lg"
             className="text-[0.75rem] sm:text-sm md:text-base px-8 py-3.5 rounded-full bg-[#020617] text-white border border-slate-600 shadow-[0_12px_28px_rgba(15,23,42,0.35)] tracking-[0.22em] uppercase hover:border-[#1d4ed8] hover:text-[#bfdbfe] hover:shadow-[0_16px_40px_rgba(15,23,42,0.5)]"
           >
